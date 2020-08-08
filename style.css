@@ -1,0 +1,90 @@
+#paineis-sobre {
+  margin-top: 20px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* adicionando imagem backgroud no header */
+header {
+  background-image: url(img/castelo.jpg);
+  background-size: cover;
+  background-position: top center;
+  height: 100%;
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* adicionando o banner */
+/* para centralizar e preciso definir o position como absolute e passar os parametros para o top, left usar o transform */
+/* o elemento pai do elemento precisa estar com o position relative no caso o header */
+.topCasaFina-banner {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5); /* deixando o fundo transparente */
+  padding: 20px;
+  width: 80%;
+  border-radius: 8px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-40%, -40%);
+  transition: 0.3s; /* transição com js, jquery ao click do usuario */
+}
+
+.titulo-depoimentos {
+  background-color: #0275d8;
+  width: 100%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 24px;
+}
+
+.contato-select,
+.grupo-radio {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grupo-radio .radio:first-child {
+  margin-top: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+/* o ultimo addres vai ficar com o margin bottom 0 */
+footer address:last-child {
+  margin-bottom: 0;
+}
+
+/* deixando o site responsivo para dispositivos maiores */
+@media (min-with: 768px) {
+  #paineis-sobre {
+    margin-top: 0;
+  }
+}
+
+@media (min-with: 992px) {
+  .titulo-depoimentos {
+    left: 0;
+    width: 50%;
+  }
+
+  .topCasaFina-bannerWrapper {
+    position: relative;
+    height: 100%;
+    width: 60%;
+  }
+}
